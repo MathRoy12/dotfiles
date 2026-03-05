@@ -23,4 +23,5 @@ alias ls='exa -lah'
 
 eval "$(zoxide init zsh --cmd cd)"
 
-fastfetch
+export PATH="/home/mathieu/.cargo/bin: $PATH"
+
