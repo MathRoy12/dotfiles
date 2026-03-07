@@ -4,7 +4,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
 	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
 	if vim.v.shell_error ~= 0 then
-		cim.api.nvim_echo({
+		vim.api.nvim_echo({
 			{ "failed to clone lazy.nvim:\n", "ErrorMSG" },
 			{ out, "WarningMSG" },
 			{ "\nPress any key to exit..." },
@@ -18,5 +18,19 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	spec = {
 		{ import = "config.plugins" },
+		{
+			"m4xshen/autoclose.nvim",
+			config = function()
+				require("autoclose").setup()
+			end,
+		},
+		{
+			"nvim-mini/mini.diff",
+			version = "*",
+			config = function()
+				require("mini.diff").setup()
+				MiniDiff.config.view.style = "sign"
+			end,
+		},
 	},
 })
