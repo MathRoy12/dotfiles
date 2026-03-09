@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	spec = {
-		{ import = "config.plugins" },
+		{ import = "plugins" },
 		{
 			"m4xshen/autoclose.nvim",
 			config = function()
