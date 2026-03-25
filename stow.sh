@@ -12,3 +12,4 @@ stow waypaper
 stow yazi
 stow zsh
 stow tmux
+stow ghostty
