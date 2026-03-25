@@ -26,3 +26,7 @@ eval "$(zoxide init zsh --cmd cd)"
 export PATH="/home/mathieu/.cargo/bin: $PATH"
 export PATH="/home/mathieu/dotfiles/bin: $PATH"
 
+# If tmux is installed and we're not in a tmux session, start one
+if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
+    tmux attach || tmux new
+fi
