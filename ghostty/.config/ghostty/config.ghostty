@@ -1,3 +1,6 @@
+#custom-shader = "shaders/retro.glsl"
+#custom-shader = "shaders/tft.glsl"
+#custom-shader = "shaders/water.glsl"
 font-family = "JetBrainsMono Nerd Font"
 theme = "Catppuccin Mocha"
 background-opacity = 0.8
