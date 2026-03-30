@@ -6,13 +6,14 @@ return {
 		---@type wk.Opts
 		---@diagnostic disable-next-line: missing-fields
 		opts = {
-			delay = 0,
+			delay = 1000,
 			icons = { mappings = vim.g.have_nerd_font },
 
 			spec = {
 				{ "<leader>f", group = "[F]ind" },
 				{ "<leader>g", group = "[G]oto" },
 				{ "<leader>o", group = "[O]pen" },
+				{ "<leader>d", group = "[D]ebug" },
 			},
 		},
 	},

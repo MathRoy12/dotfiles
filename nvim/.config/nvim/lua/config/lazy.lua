@@ -32,5 +32,14 @@ require("lazy").setup({
 				MiniDiff.config.view.style = "sign"
 			end,
 		},
+		{
+			"folke/todo-comments.nvim",
+			dependencies = { "nvim-lua/plenary.nvim" },
+			event = "VimEnter",
+			opts = {},
+			config = function()
+				require("todo-comments").setup()
+			end,
+		},
 	},
 })
