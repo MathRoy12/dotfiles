@@ -16,7 +16,7 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 export EDITOR=nvim
-eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/1_shell.json)"
+eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/2_shell.json)"
 alias vim='nvim'
 alias ls='exa -lah'
 
